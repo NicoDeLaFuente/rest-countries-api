@@ -1,16 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import WrapperContainer from './components/WrapperContainer/WrapperContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          new react app
-        </p>
-      </header>
-    </div>
+    <WrapperContainer/>
   );
 }
 

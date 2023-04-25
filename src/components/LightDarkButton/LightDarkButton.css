@@ -1,0 +1,17 @@
+.light-dark-button{
+    display:flex;
+    align-items: center;
+    gap: .5rem;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+@media screen and (min-width:1440px) {
+    .light-dark-button {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,22 @@
+.title {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--clr-dark-mode-text-and-light-element);
+    border-bottom: 3px solid hsl(0, 0%, 95%);
+}
+
+.title h1 {
+    font-size: 14px;
+}
+
+@media screen and (min-width: 1440px) {
+    .title{
+        padding: 1.5rem 3rem;
+    }
+
+    .title h1 {
+        font-size: 18px;
+    }
+}

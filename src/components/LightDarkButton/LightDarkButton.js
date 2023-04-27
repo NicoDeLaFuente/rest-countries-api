@@ -1,32 +1,31 @@
+
+import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
 import "./LightDarkButton.css";
-import { useState, useEffect } from "react";
+import { useEffect, useContext } from "react";
 
 const LightDarkButton = () => {
 
-    const [changeMode, setChangeMode] = useState(false)
+    const {clickHandlerThemeMode, isDark} = useContext(ThemeContext)
 
     useEffect(() => {
         const icon = document.querySelector(".light-dark-button i")
         const text = document.querySelector(".light-dark-button p")
-        if(changeMode) {
+        if(isDark) {
             icon.classList.replace("bi-moon", "bi-moon-fill")
             text.textContent = "Light Mode"
+            icon.classList.add("is-dark-elem", "dark-theme-text")
+            text.classList.add("is-dark-elem", "dark-theme-text")
         } else {
             icon.classList.replace("bi-moon-fill", "bi-moon")
             text.textContent = "Dark Mode"
+            icon.classList.remove("is-dark-elem", "dark-theme-text")
+            text.classList.remove("is-dark-elem", "dark-theme-text")
         }
+    }, [isDark])
 
-        
-        
-        
-    }, [changeMode])
-
-    const clickHandlerDarkLightMode = () => {
-        setChangeMode(!changeMode)
-    }
-
-    return <button onClick={clickHandlerDarkLightMode} id="light-dark-button" className="light-dark-button">
-        <i className="bi bi-moon"></i><p>Dark Mode</p>
+    
+    return <button onClick={clickHandlerThemeMode} id="light-dark-button" className="light-dark-button">
+        <i className="bi bi-moon button-color-bg"></i><p className="button-color-bg">Dark Mode</p>
     </button>
 }
 

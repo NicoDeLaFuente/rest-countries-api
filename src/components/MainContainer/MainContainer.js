@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 const MainContainer = () => {
     const [countries, setCountries] = useState([])
 
+
+
     useEffect(() => {
         fetch("https://restcountries.com/v3.1/all")
         .then(res => res.json())
@@ -14,7 +16,7 @@ const MainContainer = () => {
     }, [countries])
 
     return  <main>
-                <div className="search-and-filter">
+                <div className="search-and-filter" id="search-and-filter">
                     <SearchInput/>
                     <FilterInput/>
                 </div>

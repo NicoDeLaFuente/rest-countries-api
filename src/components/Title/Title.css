@@ -5,6 +5,7 @@
     padding: 1rem 1.5rem;
     background-color: var(--clr-dark-mode-text-and-light-element);
     border-bottom: 3px solid hsl(0, 0%, 95%);
+    color: var(--clr-light-mode-txt)
 }
 
 .title h1 {
@@ -19,4 +20,10 @@
     .title h1 {
         font-size: 18px;
     }
+}
+
+.is-dark-elem {
+    background-color: var(--clr-dark-elem);
+    color: var(--clr-dark-mode-text-and-light-element);
+    border-bottom: none;
 }

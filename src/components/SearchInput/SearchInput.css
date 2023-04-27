@@ -1,0 +1,36 @@
+.search-by-country {
+    background-color: var(--clr-dark-mode-text-and-light-element);
+    padding: 0 1rem;
+    display:flex;
+    gap: 1rem;
+    align-items: center;
+    box-shadow: 1px 1px 5px var(--clr-light-mode-input);
+    color: var(--clr-light-mode-input)
+}
+
+.search-country {
+    flex-grow:1;
+    padding: 1rem 0;
+    border: none;
+    color: var(--clr-light-mode-input);
+    background-color: transparent;
+}
+
+.search-country:focus {
+    outline: none;
+}
+
+.search-by-country::placeholder {
+    color: var(--clr-light-mode-input)
+}
+
+@media screen and (min-width: 1440px) {
+    .search-by-country{
+        flex-grow: .30;
+    }
+}
+
+.is-dark-elem {
+    background-color: var(--clr-dark-elem);
+    box-shadow: none;
+}

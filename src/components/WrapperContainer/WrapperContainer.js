@@ -3,6 +3,8 @@ import Title from "../Title/Title";
 import MainContainer from "../MainContainer/MainContainer";
 import { useContext, useEffect } from "react";
 import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import CountryDetailContainer from "../CountryDetailContainer/CountryDetailContainer";
 
 
 const WrapperContainer = () => {
@@ -22,7 +24,13 @@ const WrapperContainer = () => {
 
     return  <div className="wrapper" id="wrapper">
                 <Title/>
-                <MainContainer/>
+                <BrowserRouter>
+                    <Routes>
+                        <Route exact path="/" element={<MainContainer/>}/>
+                        <Route exact path="/:region" element={<MainContainer/>}/>
+                        <Route exact path="/detail/:country" element={<CountryDetailContainer/>}/>
+                    </Routes>
+                </BrowserRouter>
             </div>
 }
 

@@ -18,12 +18,10 @@ const SearchInput = () => {
             search.classList.remove("is-dark-elem")
             inputTxt.classList.remove("is-dark-elem")
         }
-        
-        
     }, [isDark])
 
     return  <div className="search-by-country" id="search-by-country" >
-                <i class="bi bi-search" id="icon-search"></i>
+                <i className="bi bi-search" id="icon-search"></i>
                 <input type="text" placeholder="Search for a country..." className="search-country" id="input-search"></input>
             </div>
 }

@@ -16,13 +16,14 @@ const CountriesList = ({countries}) => {
                 card.classList.remove("is-dark-elem")
             }
         })
+
         
     }, [isDark])
 
     return  <div className="country-card-container">
                 {
                     countries.map((country) => {
-                        return <CountryCard country={country}/>
+                        return <CountryCard country={country} key={country.name.official}/>
                     })
                 }
             </div> 

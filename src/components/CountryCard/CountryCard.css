@@ -10,6 +10,9 @@
     box-shadow: 3px 3px hwb(0 90% 9% / 0.2);
     font-size: 16px;
     margin-bottom: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-light-mode-txt)
 }
 
 .card img {
@@ -46,4 +49,10 @@
 
 .info span {
     font-weight: 300;
+}
+
+.is-dark-elem {
+    background-color: var(--clr-dark-elem);
+    box-shadow: none;
+    color: var(--clr-dark-mode-text-and-light-element)
 }

@@ -10,15 +10,23 @@
 .filter-title {
     display:flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 1rem;
+    padding-left: 1.5rem;
     color: var(--clr-light-mode-txt);
     font-weight: 600;
     background-color: var(--clr-dark-mode-text-and-light-element);
 }
 
 .filter-title i {
+    color: var(--clr-light-mode-txt);
     font-weight: 600;
+    background-color: transparent;
+}
+
+.filter-title p {
+    background-color: var(--clr-dark-mode-text-and-light-element);
+    color: var(--clr-light-mode-txt);
 }
 
 .menu-options {
@@ -41,6 +49,12 @@
 
 .option {
     font-weight: 600;
+    list-style-type: none;
+}
+
+.link{
+    text-decoration: none;
+    color: inherit;
 }
 
 @media screen and (min-width: 1440px) {
@@ -62,4 +76,9 @@
     background-color: var(--clr-dark-elem);
     box-shadow: none;
     color: var(--clr-dark-mode-text-and-light-element)
+}
+
+.is-dark-elem i, .is-dark-elem p {
+    background-color: var(--clr-dark-elem);
+    color: var(--clr-dark-mode-text-and-light-element); 
 }

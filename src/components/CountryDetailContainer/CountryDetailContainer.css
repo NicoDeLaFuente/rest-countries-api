@@ -40,6 +40,12 @@
     font-weight: 800;
 }
 
+.sub-details {
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .details-info > div {
     display:flex;
     gap: .25rem;
@@ -76,7 +82,53 @@
 }
 
 @media screen and (min-width: 1440px) {
-    
+
+    .country-details{
+        min-height: 90vh;
+    }
+
+    .details-and-img {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding-top:5rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    .details-and-img img {
+        flex-grow: .5;
+    }
+
+    .details {
+        flex-grow: .5;
+    }
+
+    .details h1 {
+        font-size: 1.5rem;
+    }
+
+    .sub-details {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .buttons-details {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .buttons-details h2 {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .buttons-details > div {
+        flex-grow:.5;
+        justify-content: space-between;
+    }
 
 }
 
@@ -86,6 +138,10 @@
 
 .is-elem-dark {
     background-color: var(--clr-dark-elem);
+    color: var(--clr-dark-mode-text-and-light-element)
+}
+
+.text-dark {
     color: var(--clr-dark-mode-text-and-light-element)
 }
 

@@ -66,7 +66,7 @@ const FilterInput = () => {
             <ul className='options' id="filter-options">
                 <li className='option' id='all' onClick={filterChoosen}><Link to="/" className="link">All</Link></li>
                 <li className='option' id='africa' onClick={filterChoosen}><Link to="/africa" className="link">Africa</Link></li>
-                <li className='option' id='america' onClick={filterChoosen}><Link to="/america" className="link">America</Link></li>
+                <li className='option' id='america' onClick={filterChoosen}><Link to="/americas" className="link">America</Link></li>
                 <li className='option' id='asia' onClick={filterChoosen}><Link to="/asia" className="link">Asia</Link></li>
                 <li className='option' id='europe' onClick={filterChoosen}><Link to="/europe" className="link">Europe</Link></li>
                 <li className='option' id='oceania' onClick={filterChoosen}><Link to="/oceania" className="link">Oceania</Link></li>

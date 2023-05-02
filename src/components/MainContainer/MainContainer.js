@@ -12,17 +12,14 @@ const MainContainer = () => {
 
     useEffect(() => {
 
+        const fetchCountries = fetch(`https://restcountries.com/v3.1/all`)
+                      .then(res => res.json())
+        
         if (region) {
-            fetch(`https://restcountries.com/v3.1/region/${region}`)
-            .then(res => res.json())
-            .then(dataFiltered => setCountries(dataFiltered))
+            fetchCountries.then(data => setCountries(data.filter(data => data.region.toLowerCase() === region)))
         } else {
-            fetch("https://restcountries.com/v3.1/all")
-            .then(res => res.json())
-            .then(data => setCountries(data))
+            fetchCountries.then(data => setCountries(data))
         }
-        
-        
     }, [countries, region])
 
 

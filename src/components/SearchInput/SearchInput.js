@@ -2,9 +2,15 @@ import "./SearchInput.css"
 import { useContext, useEffect } from "react"
 import { ThemeContext } from "../../context/ThemeContext/ThemeContext"
 
-const SearchInput = () => {
+const SearchInput = ({setTextSearch}) => {
 
     const {isDark} = useContext(ThemeContext)
+
+    const textInputHandler = (e) => {
+        setTextSearch(e.target.value)
+    }   
+
+
     useEffect(() => {
         const iconSearch = document.querySelector("#icon-search")
         const search = document.querySelector("#search-by-country")
@@ -22,7 +28,7 @@ const SearchInput = () => {
 
     return  <div className="search-by-country" id="search-by-country" >
                 <i className="bi bi-search" id="icon-search"></i>
-                <input type="text" placeholder="Search for a country..." className="search-country" id="input-search"></input>
+                <input type="text" placeholder="Search for a country..." className="search-country" id="input-search" onChange={textInputHandler}></input>
             </div>
 }
 

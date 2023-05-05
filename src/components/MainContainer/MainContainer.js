@@ -8,27 +8,40 @@ import { useParams } from "react-router-dom";
 const MainContainer = () => {
 
     const {region} = useParams();
+
+    //States
     const [countries, setCountries] = useState([])
+    const [textSearch, setTextSearch] = useState("")
+
+    // Fetching data
+    const fetchCountries = () => {
+        const fetching = fetch(`https://restcountries.com/v3.1/all`)
+        fetching.then( res => res.json())
+                .then (data => setCountries(data))
+    }
+
+
+    let showCountries = []
+    if(textSearch) {
+       showCountries = countries.filter(country => country.name.common.toLowerCase().includes(textSearch))
+    } else if (region) {
+        showCountries = countries.filter(country => country.region.toLowerCase() === region)
+    }else {
+        showCountries = countries
+    }
+
 
     useEffect(() => {
-
-        const fetchCountries = fetch(`https://restcountries.com/v3.1/all`)
-                      .then(res => res.json())
-        
-        if (region) {
-            fetchCountries.then(data => setCountries(data.filter(data => data.region.toLowerCase() === region)))
-        } else {
-            fetchCountries.then(data => setCountries(data))
-        }
-    }, [countries, region])
+        fetchCountries()
+    }, [])
 
 
     return  <main>
                 <div className="search-and-filter" id="search-and-filter">
-                    <SearchInput/>
+                    <SearchInput setTextSearch={setTextSearch}/>
                     <FilterInput/>
                 </div>
-                <CountriesList countries={countries}/>
+                <CountriesList showCountries={showCountries}/>
             </main>
 }
 

@@ -1,5 +1,6 @@
 main {
     padding-top: 1.5rem;
+    min-height: 90vh;
 }
 
 .search-and-filter {

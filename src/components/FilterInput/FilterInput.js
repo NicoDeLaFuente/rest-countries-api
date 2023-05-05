@@ -11,7 +11,6 @@ const FilterInput = () => {
     const {isDark} = useContext(ThemeContext)
 
     useEffect(() => {
-        const filterDiv = document.querySelector("#filter");
         const filterTitle = document.querySelector("#filter-title")
         const filterTitleTxt = document.querySelector("#filter-title p")
         const FilterTitleIcon = document.querySelector("#filter-title i")
@@ -19,13 +18,12 @@ const FilterInput = () => {
         const menuOptions = document.querySelector("#menu-options");
         
         if (isDark) {
-            filterDiv.classList.add("is-dark-elem")
             filterTitle.classList.add("is-dark-elem")
             filterTitleTxt.classList.add("is-dark-elem")
             filterOptions.classList.add("is-dark-elem")
             FilterTitleIcon.classList.add("is-dark-elem")
         } else {
-            filterDiv.classList.remove("is-dark-elem")
+
             filterTitleTxt.classList.remove("is-dark-elem")
             filterOptions.classList.remove("is-dark-elem")
             filterTitle.classList.remove("is-dark-elem")

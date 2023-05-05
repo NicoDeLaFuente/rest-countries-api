@@ -1,10 +1,10 @@
 import { useEffect } from "react"
 import "./CountryDetail.css"
 import BorderButton from "../BorderButton/BorderButton"
+import { Link } from "react-router-dom"
 
 const CountryDetail = ({detail, isDark}) => {
 
-    console.log(detail[0])
 
 //Currencies 
 const arrCurrencies = [];
@@ -13,10 +13,6 @@ for (const currency in detail[0].currencies){
     }
 
 const currencyString = arrCurrencies.toString()
-
-
-
-
 
 // From Languages Object to Languages String
     const arrLanguage = []
@@ -68,11 +64,16 @@ const currencyString = arrCurrencies.toString()
         }
 },[isDark])
 
+const populationDots = () => {
+    const population = parseInt(detail[0].population)
+    return population.toLocaleString("en-US")
+}
+
     return <div className="country-details" id="country-details">
-    <button className="btn btn-back" id="btn-back">
+    <Link to="/"className="btn btn-back" id="btn-back">
         <i className="bi bi-arrow-left"></i>
         <p>Back</p>
-    </button>
+    </Link>
     <div className="details-and-img">
         <img src={detail[0].flags.png} alt="" />
         <div className="details">
@@ -85,7 +86,7 @@ const currencyString = arrCurrencies.toString()
                     </div>
                     <div>
                         <p>Population:</p>
-                        <span>{detail[0].population}</span>
+                        <span>{populationDots()}</span>
                     </div>
                     <div>
                         <p>Region:</p>

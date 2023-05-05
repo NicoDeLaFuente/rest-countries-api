@@ -20,17 +20,30 @@ const CountryCard = ({country}) => {
         
     }, [isDark])
 
-    let name = country.name.common.replaceAll(" ", "-").toLowerCase()
-    name = name.replaceAll(",", "-")
+    //changing names format
+    const name = () => {
+        let nameReplaced = country.name.common.replaceAll(" ", "-").toLowerCase()
+        return nameReplaced.replaceAll(",", "-")
+    }
+    
 
 
-    return  <Link to={`/detail/${name}`} className="card">
+    //changing populations format
+    const populationDots = () => {
+        const population = parseInt(country.population)
+        return population.toLocaleString("en-US")
+    }
+    
+
+
+
+    return  <Link to={`/detail/${name()}`} className="card">
                 <img src={country.flags.png} alt={`${country.name.official} flag`}/>
                 <div className="info-container" id="info-container">
                     <h2>{country.name.common} </h2>
                     <div className="info">
                         <p>Population: 
-                            <span> {country.population}</span>
+                            <span> {populationDots()}</span>
                         </p>
                         <p>Region:
                             <span> {country.continents}</span>

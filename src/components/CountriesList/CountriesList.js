@@ -3,7 +3,7 @@ import CountryCard from "../CountryCard/CountryCard";
 import { useContext, useEffect } from "react";
 import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
 
-const CountriesList = ({countries}) => {
+const CountriesList = ({showCountries}) => {
 
     const {isDark} = useContext(ThemeContext)
     useEffect(() => {
@@ -22,7 +22,7 @@ const CountriesList = ({countries}) => {
 
     return  <div className="country-card-container">
                 {
-                    countries.map((country) => {
+                    showCountries.map((country) => {
                         return <CountryCard country={country} key={country.name.official}/>
                     })
                 }

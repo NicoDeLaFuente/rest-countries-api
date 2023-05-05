@@ -19,6 +19,8 @@
     color:var(--clr-light-mode-txt);
     font-weight: 600;
     cursor:pointer;
+    width: 100px;
+    text-decoration: none;
 }
 
 .details-and-img {
@@ -29,6 +31,9 @@
     
 }
 
+.details-and-img img {
+    height: 200px;
+}
 .details {
     display:flex; 
     flex-direction: column;
@@ -99,6 +104,8 @@
 
     .details-and-img img {
         flex-grow: .5;
+        height: 260px;
+        width: 360px;
     }
 
     .details {

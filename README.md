@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/NicoDeLaFuente/rest-countries-api]
-- Live Site URL: [TBC]
+- Solution URL: [GitHub] (https://github.com/NicoDeLaFuente/rest-countries-api)
+- Live Site URL: [Netlify] (https://delightful-raindrop-710469.netlify.app/)
 
 ## My process
 

@@ -7,9 +7,11 @@ const ThemeProvider = ({children}) => {
 
     const [isDark, setIsDark] = useState(false)
 
-    const clickHandlerThemeMode = () => {
+    const clickHandlerThemeMode = (e) => {
         setIsDark(!isDark)
     }
+    
+    
 
 
     return  <ThemeContext.Provider value={{isDark, clickHandlerThemeMode}}>

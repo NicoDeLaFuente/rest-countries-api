@@ -76,6 +76,7 @@
     display:flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .btn-border {
@@ -84,6 +85,7 @@
     background-color: var(--clr-dark-mode-text-and-light-element);
     padding: .5rem 1rem;
     cursor:pointer;
+    text-decoration: none;
 }
 
 @media screen and (min-width: 1440px) {

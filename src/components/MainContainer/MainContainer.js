@@ -9,17 +9,16 @@ const MainContainer = () => {
 
     const {region} = useParams();
 
-    //States
-    const [countries, setCountries] = useState([])
-    const [textSearch, setTextSearch] = useState("")
-
-    // Fetching data
-    const fetchCountries = () => {
-        const fetching = fetch(`https://restcountries.com/v3.1/all`)
-        fetching.then( res => res.json())
-                .then (data => setCountries(data))
-    }
-
+     //States
+     const [countries, setCountries] = useState([])
+     const [textSearch, setTextSearch] = useState("")
+ 
+     // Fetching data
+     const fetchCountries = () => {
+         const fetching = fetch(`https://restcountries.com/v3.1/all`)
+         fetching.then( res => res.json())
+                 .then (data => setCountries(data))
+     }
 
     let showCountries = []
     if(textSearch) {

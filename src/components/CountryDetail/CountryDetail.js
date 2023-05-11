@@ -3,12 +3,8 @@ import "./CountryDetail.css"
 import BorderButton from "../BorderButton/BorderButton"
 import { Link } from "react-router-dom"
 
-const CountryDetail = ({detail, isDark, borderCountry}) => {
+const CountryDetail = ({detail, isDark}) => {
 
-// manejador del click de borders
-const borderCountryHandler = (e) => {
-    console.log(e.currentTarget.id)
-}
 
 //Currencies 
 const arrCurrencies = [];
@@ -130,7 +126,7 @@ const populationDots = () => {
                 <h2>Border Countries</h2>
                 <div>
                     { detail[0].borders ? detail[0].borders.map(border => {
-                        return <BorderButton border={border} borderCountryHandler={borderCountryHandler} key={border}/>
+                        return <BorderButton border={border} key={border}/>
                     }): <p>Not have any</p>}
                 </div>
             </div>

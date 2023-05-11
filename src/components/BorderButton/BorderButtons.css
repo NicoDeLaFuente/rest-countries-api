@@ -1,0 +1,5 @@
+.is-dark-elem {
+    background-color: var(--clr-dark-elem);
+    box-shadow: none;
+    color: var(--clr-dark-mode-text-and-light-element)
+}
